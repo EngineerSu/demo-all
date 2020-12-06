@@ -18,7 +18,9 @@
 
 # Build targets
 /target
+/out
 */target/
+*/out/
 
 # Report directories
 /reports
