@@ -3,9 +3,13 @@ package org.example.mybatis.mapper;
 import org.apache.ibatis.annotations.Mapper;
 import org.example.mybatis.dataobject.UserDO;
 
+import java.util.List;
+
 @Mapper
 public interface UserMapper {
-    void insert(UserDO userDO);
+    Long insert(UserDO userDO);
 
-    UserDO selectByName(String name);
+    List<UserDO> selectByName(String name);
+
+    List<UserDO> selectAll();
 }
