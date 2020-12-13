@@ -1,13 +1,15 @@
-package org.example.mybatis.mapper;
+package org.example.mvc.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
-import org.example.mybatis.dataobject.UserDO;
+import org.example.mvc.dataobject.UserDO;
 
 import java.util.List;
 
 @Mapper
 public interface UserMapper {
-    Long insert(UserDO userDO);
+    void insert(UserDO userDO);
+
+    UserDO selectById(Long id);
 
     List<UserDO> selectByName(String name);
 
